@@ -61,7 +61,6 @@
 
     getAllContacts : function () {
       var i;
-      // clear the target area just in case there's something in it.
       target.innerHTML = '';
 
       if (count > 0) {
@@ -75,27 +74,22 @@
     },
 
     setActiveSection : function() {
-      // add a class of 'active' to the wrapping div
       this.parentNode.setAttribute('class', 'active');
     },
 
     removeActiveSection : function() {
-      // remove the class from the wrapping div
       this.parentNode.removeAttribute('class');
     },
 
     addHoverClass : function() {
-      // add the class to the wrapping div
       searchForm.setAttribute('class', 'hovering');
     },
 
     removeHoverClass : function() {
-      // remove the class from the wrapping div
       searchForm.removeAttribute('class');
     }
   };
 
-  /* activate the event listeners */
   searchField.addEventListener('keyup', addr.search, false);
   searchField.addEventListener('focus', addr.setActiveSection, false);
   searchField.addEventListener('blur', addr.removeActiveSection, false);
