@@ -46,8 +46,7 @@
       target.innerHTML = '';
 
       if (count > 0 && searchValue !== '') {
-
-        for (i = 0; i < count; i = i + 1) {
+        for (i = 0; i < count; i++) {
           // look through the name value to see if it contains the searchterm
           var obj = contacts.addressBook[i];
           var isItFound = obj.name.indexOf(searchValue);
@@ -64,8 +63,7 @@
       target.innerHTML = '';
 
       if (count > 0) {
-
-        for (i = 0; i < count; i = i + 1) {
+        for (i = 0; i < count; i++) {
           var obj = contacts.addressBook[i];
           target.innerHTML += '<p>' + obj.name + ', <a href="mailto:' +
           obj.email + '">'+ obj.email +'</a><p>';
