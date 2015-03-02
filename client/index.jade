@@ -1,0 +1,19 @@
+html
+  head
+    meta(charset='utf-8')
+    title Address Book
+  body
+    h1 Address Book
+  
+    form#search-form(action='', method='get')
+      .section
+        label(for='q') Search address book
+        input#q(type='search', name='q', required='', placeholder='type a name')
+    
+      .button-group
+        button#btn-search(type='submit') search
+        button#get-all(type='button') get all contacts
+    
+    #output
+      
+    script(src='/main.js')
